@@ -1,0 +1,21 @@
+.title {
+  max-width: $max-width;
+  margin: auto;
+  word-spacing: 9999px;
+  width: 90%;
+  &__h1 {
+    border: 2px solid $white-color;
+    padding: 0.3em;
+  }
+
+  @media (min-width: 600px) {
+    margin: auto;
+    word-spacing: 0;
+    align-items: flex-start;
+    &__h1 {
+      max-width: 400px;
+      border: 2px solid $white-color;
+      padding: 0.7em 2em 0.7em 0.7em;
+    }
+  }
+}

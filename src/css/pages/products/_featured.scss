@@ -1,0 +1,50 @@
+.featured {
+  max-width: $max-width;
+  padding: $section-padding 0;
+  max-width: 700px;
+
+  &__content {
+    margin: 2em 0;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 0.3em;
+    text-transform: uppercase;
+    padding: 0 0.5rem;
+  }
+
+  &__p {
+    padding: 0 1.2rem;
+  }
+
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 130px 1fr;
+    grid-template-rows: 1fr 2fr;
+    align-items: end;
+    max-width: $max-width;
+
+    &__img {
+      grid-column: 1 / 3;
+      grid-row: 1 / -1;
+    }
+
+    &__content {
+      margin: 0;
+      grid-column: 2 / -1;
+      grid-row: 2 / -1;
+      background-color: $white-color;
+      padding: 4em 0 0 4em;
+      text-align: left;
+    }
+
+    &__title {
+      padding: 0;
+    }
+
+    &__p {
+      padding: 0;
+    }
+  }
+}

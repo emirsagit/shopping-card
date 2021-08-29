@@ -1,9 +1,15 @@
-import './css/App.css';
+import '../css/App.scss';
+import Products from './pages/products/Products';
+import Cart from './pages/cart/Cart';
+import { Switch, Route } from 'react-router';
 
 function App() {
   return (
-    <div className="App">
-      here it is
+    <div>
+      <Switch>
+        <Route exact path="/"><Products /></Route>
+        <Route path="/cart"><Cart /></Route>
+      </Switch>
     </div>
   );
 }
