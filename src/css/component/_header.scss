@@ -1,26 +1,44 @@
 header {
-    background-image: url('../../images/mobile/image-hero.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    color: $white-color;
-    display: flex;
-    flex-direction: column;
+  background-image: url("../../images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  color: $white-color;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+}
+
+.header__products {
+  min-height: 100vh;
 }
 
 nav {
-    display: flex;
-    justify-self: flex-start;
-    justify-content: space-between;
-    width: $section-width;
-    margin: 0 auto;
-    padding: 1em 0;
-    max-width: $max-width;
+  display: flex;
+  justify-self: flex-start;
+  justify-content: space-between;
+  width: $section-width;
+  margin: 0 auto;
+  padding: 1em 0;
+  max-width: $max-width;
+}
+
+.nav__cart {
+  display: flex;
+  align-items: center;
+}
+
+.nav__number {
+  background: $white-color;
+  color: blue;
+  font-size: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+  margin-left: 0.1em;
+  padding: 0 0.5em;
+  font-weight: 900;
 }
 
 @media (min-width: 600px) {
-    header{
-        background-image: url('../../images/desktop/image-hero.jpg');
-    }
+  .header__products {
+    background-image: url("../../images/desktop/image-hero.jpg");
+  }
 }
-

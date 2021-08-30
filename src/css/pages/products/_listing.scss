@@ -34,6 +34,14 @@
     justify-content: space-between;
   }
 
+  &__icon {
+    margin: 0.5em;
+  }
+
+  &__icon--basket {
+    margin-left: auto;
+  }
+
   @media (min-width: 1200px) {
     &__products {
       flex-direction: row;

@@ -7,7 +7,7 @@ import ProductsListing from "./components/ProductsListing";
 export default function Products() {
   return (
     <main>
-      <header className="bg-header">
+      <header className="header__products">
         <Nav />
         <Title />
       </header>
