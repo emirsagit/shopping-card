@@ -1,21 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Icons from "./Icons";
+import useHover from "../../../hooks/useHover";
+import { ThemeContext } from "../../../data/ThemeContext";
 
 function SingleProduct({ product }) {
-  const [hovered, setHovered] = useState(false);
-  function toggleHover() {
-    setHovered((prev) => !prev);
-  }
+  const [hovered, ref] = useHover();
+  const { convertToCurrency } = useContext(ThemeContext);
 
   return (
-    <div
-      className={`listing__product ${hovered ? "hovered" : "not-hovered"}`}
-      onMouseEnter={toggleHover}
-      onMouseLeave={toggleHover}
-    >
+    <div className="listing__product" ref={ref}>
       <Icons hovered={hovered} product={product} />
-      <img src={product.image} className="listing__img" />
+      <img src={product.image} className="listing__img" alt={product.title} />
+      <p className="listing__price" style={hovered ? { display: "block" } : { display: "none" }}>
+        {convertToCurrency(product.price)}
+      </p>
     </div>
   );
 }
@@ -25,13 +24,3 @@ SingleProduct.propTypes = {
 };
 
 export default SingleProduct;
-
-// # Challenge
-
-// Add propTypes to the Image component
-
-// 1. className should be a string
-// 2. img should be an object, specifically an object with `id`, `url`, and `isFavorite` properties
-//     a. Hint: Specifying the properties of an object is called and object's "shape"
-
-// https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes

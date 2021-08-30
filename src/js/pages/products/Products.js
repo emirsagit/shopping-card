@@ -1,7 +1,6 @@
 import React from "react";
 import Title from "./components/Title";
 import Nav from "../../shared/Nav";
-import Featured from "./components/Featured";
 import ProductsListing from "./components/ProductsListing";
 
 export default function Products() {
@@ -11,7 +10,6 @@ export default function Products() {
         <Nav />
         <Title />
       </header>
-      <Featured />
       <ProductsListing />
     </main>
   );

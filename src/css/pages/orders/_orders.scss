@@ -1,0 +1,32 @@
+.order {
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  &__table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  &__table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  &__table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  &__table tr:hover {
+    background-color: #ddd;
+  }
+
+  &__table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: $secondary-color;
+    color: white;
+  }
+}

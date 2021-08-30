@@ -1,22 +1,25 @@
-import React from "react";
-import { imageInteractive } from "../../../../images/index.js";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../../data/ThemeContext";
+import useHover from "../../../hooks/useHover";
+import Icons from "./Icons";
 
-export default function Featured() {
+export default function Featured({ featuredProduct }) {
+  const { convertToCurrency } = useContext(ThemeContext);
+  const [hovered, ref] = useHover();
+
   return (
-    <section className="featured section-width">
+    <div className="featured section-width" ref={ref}>
       <div className="featured__img">
-        <img src={imageInteractive.default} alt="interactive" />
+        <img src={featuredProduct.image} alt="interactive" />
       </div>
       <div className="featured__content">
-        <h2 className="featured__title">
-          the leader in <br /> interactive vr
-        </h2>
-        <p className="featured__p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque ante ac orci tincidunt, ac
-          imperdiet justo ultricies. Suspendisse potenti. Mauris vel lacus sit amet nulla tempor iaculis eget sit
-          amet tellus. Morbi vel ullamcorper odio.
-        </p>
+        <Icons hovered={hovered} product={featuredProduct} />
+        <div className="featured__header">
+          <h2 className="featured__title">BEST SELLER</h2>
+          <p className="featured__price">{convertToCurrency(featuredProduct.price)}</p>
+        </div>
+        <p className="featured__p">{featuredProduct.title}</p>
       </div>
-    </section>
+    </div>
   );
 }

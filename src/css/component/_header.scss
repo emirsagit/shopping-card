@@ -19,11 +19,21 @@ nav {
   margin: 0 auto;
   padding: 1em 0;
   max-width: $max-width;
+  font-size: 1.2rem;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
 }
 
 .nav__cart {
   display: flex;
   align-items: center;
+}
+
+.nav__link {
+  margin-right: 1em;
 }
 
 .nav__number {

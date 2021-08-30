@@ -1,14 +1,21 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { ThemeContext } from "../data/ThemeContext";
 
 export default function Nav() {
-  const { cartItems } = useContext(ThemeContext);
+  const { cartItems, redirect } = useContext(ThemeContext);
   const cartLength = cartItems.length;
 
   return (
     <nav>
-      <Link to="/">Products</Link>
+      <ul className="nav__list">
+        <Link to="/" className="nav__link">
+          Products
+        </Link>
+        <Link to="/orders" className="nav__link">
+          My-Orders
+        </Link>
+      </ul>
       <Link to="/cart" className="nav__cart">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#fff">
           <path fill="none" d="M0 0h24v24H0z" />
@@ -16,6 +23,7 @@ export default function Nav() {
         </svg>
         {cartLength > 0 && <p className="nav__number">{cartLength}</p>}
       </Link>
+      {redirect ? <Redirect push to="/orders" /> : null}
     </nav>
   );
 }
