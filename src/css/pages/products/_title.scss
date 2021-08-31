@@ -3,19 +3,23 @@
   margin: auto;
   word-spacing: 9999px;
   width: 90%;
+
   &__h1 {
-    border: 2px solid $white-color;
-    padding: 0.3em;
+    padding: 1em;
+    text-align: center;
+    background-image: url("../../../images/title-background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   @media (min-width: 600px) {
     margin: auto;
-    word-spacing: 0;
     align-items: flex-start;
+
     &__h1 {
       max-width: 400px;
-      border: 2px solid $white-color;
-      padding: 0.7em 2em 0.7em 0.7em;
+      padding: 1em 2em 1em 1.2em;
     }
   }
 }

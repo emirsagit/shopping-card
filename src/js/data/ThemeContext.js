@@ -101,7 +101,7 @@ function Provider(props) {
         .then((data) => {
           const newData = data.map((el) => {
             el.favorited = false;
-            el.id === 14 ? (el.isFeautured = true) : (el.isFeautured = false);
+            el.id === 20 ? (el.isFeautured = true) : (el.isFeautured = false);
             return el;
           });
           setProducts(newData);

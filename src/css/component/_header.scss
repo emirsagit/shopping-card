@@ -1,10 +1,11 @@
 header {
-  background-image: url("../../images/mobile/image-hero.jpg");
+  background-image: url("../../images/title.jpg");
   background-repeat: no-repeat;
   color: $white-color;
   display: flex;
   flex-direction: column;
   background-size: cover;
+  min-height: 5em;
 }
 
 .header__products {
@@ -15,11 +16,21 @@ nav {
   display: flex;
   justify-self: flex-start;
   justify-content: space-between;
-  width: $section-width;
   margin: 0 auto;
   padding: 1em 0;
-  max-width: $max-width;
   font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav__wrapper {
+  display: flex;
+  width: $section-width;
+  margin: auto;
+  justify-content: space-between;
+  max-width: $max-width;
 }
 
 .nav__list {
@@ -49,6 +60,6 @@ nav {
 
 @media (min-width: 600px) {
   .header__products {
-    background-image: url("../../images/desktop/image-hero.jpg");
+    background-image: url("../../images/title.jpg");
   }
 }

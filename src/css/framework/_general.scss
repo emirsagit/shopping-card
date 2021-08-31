@@ -7,8 +7,15 @@ img {
   max-width: 100%;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
 .section-width {
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   max-width: $max-width;
 }

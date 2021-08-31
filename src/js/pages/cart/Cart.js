@@ -3,6 +3,7 @@ import Nav from "../../shared/Nav";
 import { ThemeContext } from "../../data/ThemeContext";
 import SingleCartItem from "./components/SingleCartItem";
 import OrderBtnEl from "./components/OrderBtnEl";
+import Footer from "../../shared/Footer";
 
 export default function Cart() {
   const { cartItems } = useContext(ThemeContext);
@@ -27,6 +28,7 @@ export default function Cart() {
       <h1 className="cart__title">Check out </h1>
       {cartItemsEls}
       {orderBtnEl}
+      <Footer />
     </main>
   );
 }

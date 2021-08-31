@@ -1,7 +1,6 @@
 .featured {
   max-width: $max-width;
   padding: $section-padding 0;
-  max-width: 700px;
   position: relative;
 
   &__content {
@@ -13,14 +12,13 @@
   &__title {
     margin-bottom: 0.3em;
     text-transform: uppercase;
-    padding: 0 0.5rem;
     background-color: $secondary-color;
     color: $white-color;
-    padding: .5em .5em .3em;
+    padding: 0.5em 0.5em 0.3em;
     width: max-content;
   }
 
-  &__header{
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
