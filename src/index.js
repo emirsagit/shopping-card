@@ -8,7 +8,7 @@ import { Provider } from "./js/data/ThemeContext";
 ReactDOM.render(
   <React.StrictMode>
     <Provider>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="/shopping-card">
         <App />
       </Router>
     </Provider>
