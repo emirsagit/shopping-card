@@ -1,6 +1,6 @@
-# Simple e-commerce shopping cart application created with React and Context API
+# E-commerce shopping cart application created with React, Context API, Sass
 
-- I used SASS to Style Components. The e-commerce cart application persists on LocalStorage. Thanks to [The fakestoreapi](https://fakestoreapi.com/products) which gives these products and images to use for free. 
+- I used SASS to Style Components. The e-commerce cart application persists on LocalStorage. Thanks to [The fakestoreapi](https://fakestoreapi.com/products) which gives these products and images to use for free.
 
 ## Built With
 
@@ -9,6 +9,15 @@
 ## Live Demo
 
 [Live Demo Link](https://emirsagit.github.io/shopping-card/)
+
+## My process
+
+- First, I focused on getting all the essentials working, like fetching from API, persisting local storage and routing. From there, I worked on file structure to make the components reusable and easier to maintain. And finally, there were several rounds of component coding, styling, and refactoring.
+
+## What I learned
+
+- This was a great React single page application to interface with the REST API. While I have written several React applications from scrath, this was the first to use React Router and an API. This provided a great opportunity to manage the information from the API and to control the navigation between pages. This was the first project where I incorporated SASS with React. 
+- I plan to continue building React single page applications to get more experience with hooks and styled components. I will research the nature of state within React application to understand the best practices for managing state and how to handle browser refreshes.
 
 ## Getting Started
 
